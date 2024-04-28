@@ -1,0 +1,521 @@
+@font-face {
+    font-family: mont;
+    src: url(montserrat_n4.1d581f6d4bf1a97f4cbc0b88b933bc136d38d178.woff2);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #000;
+
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+
+.announc ul{
+    background: #091844;
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style: none;
+}
+.announc ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: mont;
+   
+}
+.nav{
+    position: relative;
+    /* background: green; */
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.logo{
+    /* background: #000; */
+    width: 150px;
+    /* padding-top: 20px; */
+    margin-left: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav .logo img{
+    width: 180px;
+}
+.mega{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.mega ul {
+    /* background: #000; */
+    display: flex;
+    text-decoration: none;
+    gap: 32px;
+}
+.mega li{
+    list-style: none;
+}
+.mega li a {
+    text-decoration: none;
+    color: #4388B6;
+    font-size: 18px;
+    font-family: mont;
+}.inner1{
+    position:absolute;
+   display: flex;
+    /* top: 17rem; */
+    color: #ffff;
+    background-color: #091844;
+    z-index: 1;
+    width: 700px;
+    height: 330px;
+    border-radius: 10px;
+    /* left: 0; */
+    margin-left: -71px;
+    /* padding: 0 2rem; */
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 0.1ms;
+    box-shadow: 0 2px 0 0  rgba(3, 3, 3, 0.1);
+}
+.inner2 header{
+    white-space: nowrap;
+    width: 40px;
+    color: #ffffff;
+    display: inline;
+    font-size: 20px;
+    padding: 0 12px;
+    margin-top: 10px;
+    
+}
+.inner3 li{
+    position: relative;
+    padding-left: 1rem;
+    }
+    .inner3 ul{
+        display: flex;
+    }
+    .inner2{
+        width: 47rem;
+        border-left:  1px solid  #a3a3a123; 
+    }
+    .inner3 li a{
+        display: grid;
+        white-space: normal;
+        text-align: center;
+        font-size: 15px;
+        padding: 14px;
+    }
+     .active #links{
+        opacity: 1;
+        visibility: 1;
+        transform: translateX(0);
+        transition: all ease 0.5s;
+    }
+   
+     /* #links:hover .inner1{
+         transition: all ease 0.5s;
+     }  */
+     #links :hover #iner{
+        opacity: 1;
+        visibility: visible;
+    }
+    #links li a:hover{
+        transition: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        color:#000;
+     } 
+     .main{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+     }
+     .main img{
+        width: 100%;
+       height: 140vh;
+       
+    }
+    .page2{
+        width: 100%;
+        position: relative;
+        height: 60vh;
+    }
+    .review{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4388B6;
+      margin-top: 380px;
+    }
+    .review h4{
+font-family: mont;
+font-size: 45px;
+    }
+    .pera{
+        left: 50%;
+        top: 13%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        font-family: mont;
+        font-size: 16px;
+        margin-top: 13px;
+        opacity: 0.7;
+    }
+
+
+    /* Slider  */
+   
+    i {
+        position: absolute;
+        display: block;
+        width: 650px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 5px;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+    
+    i:before, i:after {
+        content: '⥪';
+        position: absolute;
+        /* transform: translate(-50%, -50%); */
+        top: 50%;
+        left: 1rem;
+        z-index: 2;
+        width: 2rem;
+        height: 2rem;
+        background: dodgerblue;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+    }
+    
+    i:after {
+        content: '⥭';
+        left: auto;
+        right: 1rem;
+    }
+    
+    /* I haven't found a way for IE and Edge to let me style inputs that way */
+    input {
+        appearance: none;
+        -ms-appearance: none;
+        -webkit-appearance: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 5px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transform: translateX(100%);
+        transition: transform ease-in-out 400ms;
+        z-index: 1;
+    }
+    
+    input:focus {
+        outline: none;
+    }
+    
+    /* input:after {
+        content: attr(title);
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        padding: .5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+    } */
+    
+    input:not(checked):before {
+        content: '';
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        top: 50%;
+        left: calc(-100% + 1rem);
+    }
+    
+    input:checked:before {
+        display: none;
+        left: 1rem;
+    }
+    
+    input:checked {
+        transform: translateX(0);
+        /* pointer-evet:; */
+        z-index: 0;
+        box-shadow: -5px 10px 20px -15px rgba(0,0,0,1);
+    }
+    
+    input:checked + input:before {
+        left: -3rem;
+    }
+    
+    input:checked + input ~ input:before {
+        display: none;
+    }
+          /*end */
+
+.page3{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+.cardo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+
+
+
+
+
+    .serviceBox{
+    background: #fff;
+    text-align: center;
+    padding:25px;
+    box-shadow: 0 2px 5px #888282;
+    /* border-top: 10px solid #ff8b3d; */
+    margin-top: 80px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    position: relative;
+    transition: all .4s ease-in-out 0s;
+    background: #fff;
+    text-align: center;
+    border-top: 5px solid #021844!important;
+    height: 322px;
+    width: 26%;
+          }
+          /* .serviceBox .service-icon i {
+            color: #961010;
+            font-size: 55px;
+        } */
+        /* .serviceBox .service-icon i {
+            transform: rotate(0);
+            transition: all .2s ease-out 0s;
+        } */
+.serviceBox .title { 
+    font-size: 21px;
+font-weight: 700;
+color: #4a4a4a;
+line-height: 40px;
+margin: 0 0 35px;
+position: relative;
+}
+
+.serviceBox .description {
+       font-size: 15px;
+ color: #7a7a7a;
+ line-height: 24px;
+  margin-bottom: 20px;
+ padding: 10px 20px;
+   font-family: Arial;
+            }
+  p {
+   margin-top: 0;
+  margin-bottom: 1rem;
+            }
+  .serviceBox .service-icon {
+   width: 130px;
+  height: 130px;
+     /* line-height: 144px; */
+   /* border-radius: 50%; */
+      background: #fff;
+    /* border: 5px solid #5e5e5e; */
+            }
+.serviceBox .service-icon {
+    width: 130px;
+      height: 130px;
+     line-height: 70px;
+  margin-top: -83px;
+      border-radius: 50%;
+border: 2px solid #021844!important;
+  font-size: 46px;
+  position: relative;
+    transition: all .2s ease-out 0s;
+     background: #fff;
+  margin: -88px auto 0;
+ }
+ .page4{
+    width: 100%;
+position: relative;
+    height: 100vh;
+    /* background-color: red; */
+ }
+ .center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .center img {
+    width: 78%;
+    margin-top: 70px;
+ }
+ .page5{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+ }
+ .topic{
+    margin-top: 60px;
+    width: 100%;
+    height: 70vh;
+    background:#091844;
+ }
+ 
+ .topic h1{
+    color: #fff;
+    font-family: mont;
+text-align: start;    
+padding-left: 80px;
+padding-top: 70px;
+font-size: 45px; 
+}
+.topic p {
+    line-height: 27px;
+    padding-top: 20px;
+    width: 100%;
+    font-weight: 900;
+    /* background: #000; */
+    font-family: mont;
+    text-align: left;
+    padding-left: 80px;
+    font-size: 19px;
+    color: #fff;
+}
+.card-image {
+	display: block;
+	min-height: 20rem; /* layout hack */
+	background: #fff center center no-repeat;
+	background-size: cover;
+    width: 130%;
+	/* filter: blur(3px); blur the lowres image */
+}
+
+.card-image > img {
+	display: block;
+	width: 80%;
+
+	opacity: 1; /* visually hide the img element */
+}
+
+.card-image.is-loaded {
+	filter: none; /* remove the blur on fullres image */
+	transition: filter 1s;
+}
+.card-list {
+	display: block;
+	margin: 1rem auto;
+	padding: 0;
+	font-size: 0;
+	text-align: center;
+	list-style: none;
+}
+
+.card {
+	display: inline-block;
+	width: 90%;
+	max-width: 20rem;
+	margin: 1rem;
+	font-size: 1rem;
+	text-decoration: none;
+	overflow: hidden;
+	/* box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5); */
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.card:hover {
+	transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+.card-description {
+	display: block;
+	padding: 1em 0.5em;
+	color: #515151;
+	text-decoration: none;
+}
+
+.card-description > h2 {
+	margin: 0 0 0.5em;
+    text-align: start;
+    color: #091844;
+    margin-top: 30px;
+}
+
+.card-description > p {
+	margin: 0;
+    text-align: start;
+    font-family: mont;
+    opacity: 0.7;
+}
+
+.head{
+    position: relative;
+    height: 40%;
+    width: 100%;
+    color: #fff;
+}
+.hea{
+    height: 40vh;
+    background:  #091844;
+    display: block;
+    text-align: center;
+}
+.hea h1{
+    padding: 60px;
+    font-size: 50px;
+    font-family: mont;
+    color: #fff;
+}
+.bu{
+    width: 200px;
+    border-radius: 100px;
+    height: 50px;
+    background:#F4CC1D;
+    color: #091844;
+    font-size: 22px;
+    font-weight: 900;
+    border: none;
+    font-family: mont;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.page7{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+}
